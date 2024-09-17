@@ -2,6 +2,7 @@ resource "aws_launch_template" "my-vpc-lt" {
     image_id = var.ami
     instance_type = var.instance
     key_name = aws_key_pair.Tf-keypair.key_name
+    name = var.lt-name
 
     network_interfaces {
       subnet_id = aws_subnet.my-vpc-private-sub.id

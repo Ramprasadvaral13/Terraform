@@ -47,3 +47,13 @@ variable "route-cidr" {
     type = string
   
 }
+
+variable "asg-name" {
+    type = string
+  
+}
+
+variable "lt-name" {
+    type = string
+  
+}

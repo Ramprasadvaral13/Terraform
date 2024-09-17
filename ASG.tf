@@ -2,6 +2,7 @@ resource "aws_autoscaling_group" "my-asg" {
     launch_template {
       id = aws_launch_template.my-vpc-lt.id
       version = "$Latest"
+      name = var.asg-name
     }
     vpc_zone_identifier = [ aws_subnet.my-vpc-private-sub.id ]
     min_size = 1
